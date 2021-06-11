@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- vendor -->
+    <link href="./css/vendor.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>New Estimates</title>
+  </head>
+  <body class="bg-soft">
+    <div class="wrapper">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
+              <li class="nav-item">
+                <a class="nav-link "  href="index.html">Dashboard</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="estimates.html" tabindex="-1" aria-disabled="true">Estimates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="invoice.html" tabindex="-1" aria-disabled="true">Invoices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html" tabindex="-1" aria-disabled="true">Customers </a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prod.html" tabindex="-1" aria-disabled="true">Product and services</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i data-feather="bell" class=""></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">An invoice has been paid</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i data-feather="key" class=""></i></a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+    <div class="">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- side bar -->
+          <div class="col-md-2 fixed-top min-vh-100 bg-white d-none d-lg-block" style="padding-top:5rem;">
+            
+            
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-dark"  href="index.html"><i data-feather="database" class=""></i> Dasboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="estimates.html"><i data-feather="file" class=""></i> Estimates</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="invoice.html"><i data-feather="file-plus" class=""></i> Invoices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="customers.html"><i data-feather="user" class=""></i>Customers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="prod.html">Product and services</a>
+              </li>
+              
+            </ul>
+          </div>
+          <!-- end of side bar -->
+          <!-- main content -->
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <section style="padding-top:6rem;">
+              <div class="container">
+                <!-- breadcrumbs -->
+                <div class="row">
+                  <div class="col-6">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item active text-uppercaste fw-bolder"><a href="estimates.html" class="text-dark">Estimates</a></li>
+                        <li class="breadcrumb-item active text-uppercaste fw-bolder" aria-current="page">create Estimates</li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+                <hr>
+                <!-- end of bread crumbs -->
+              </div>
+            </section>
+            <section>
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="card mt-lg-5 mb-5">
+                    
+                    <div class="card-title ps-4 pt-4"><p class="fw-bold text-muted">Add an estimate</p></div>
+                    
+                    <div class="card-body">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="customer-tab" data-bs-toggle="tab" data-bs-target="#customer" type="button" role="tab" aria-controls="customer" aria-selected="true">Customer</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button" role="tab" aria-controls="product" aria-selected="false">product</button>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="customer" role="tabpanel" aria-labelledby="customer-tab">
+                            <div class="row mt-3">
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="text" class="form-control" id="floatingInput" placeholder=" Client Name">
+                                <label for="floatingInput"><i data-feather="user" class=""></i> Client Name</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="Estimate Number">
+                                <label for="floatingInput"><i data-feather="file" class=""></i> Estimate Number</label>
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder=" Phone number">
+                                <label for="floatingInput"><i data-feather="Phone-call"></i> Phone number</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="Email address">
+                                <label for="floatingInput"><i data-feather="send" class=""></i> Email address</label>
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="date" class="form-control" id="floatingInput" placeholder=" Date">
+                                <label for="floatingInput">Date</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6">
+                                <input type="date" class="form-control" id="floatingInput" placeholder="Expiring date">
+                                <label for="floatingInput">Expiring Date</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p class="text-end"><a href="#"><button type="button" class="btn btn-danger">Next</button></a></p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+                            <div class="row">
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="product">
+                                <label for="floatingInput">Product</label>
+                              </div>
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="text-area" class="form-control" id="floatingInput" placeholder="product">
+                                <label for="floatingInput">Description</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="Amount">
+                                <label for="floatingInput">Amount</label>
+                              </div>
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="Tax">
+                                <label for="floatingInput">Tax</label>
+                              </div>
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="Quantity">
+                                <label for="floatingInput">Quantity</label>
+                              </div>
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="Discount">
+                                <label for="floatingInput">Discount</label>
+                              </div>
+                              <div class="form-floating mt-3 col-md-6">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Customer address">
+                                <label for="floatingInput">Customer address</label>
+                              </div>
+                            </div>
+                            <div class="row justify-content-center">
+                              <div class="col-md-6 mt-lg-5">
+                                <p class="text-center"></p><a href="preview.html"><button type="button" class="btn btn-secondary">Preview</button></a> <a href="#"><button type="button" class="btn btn-secondary">Send</button></a> <a href="#"><button type="button" class="btn btn-secondary">Save</button></a></div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+      </div>
+      <!-- end of main-->
+    </div>
+  </div>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script>
+feather.replace()
+</script>
+<script>
+window.onload = function() {
+var dataPoints = [];
+var options =  {
+animationEnabled: true,
+theme: "light2",
+title: {
+text: "Revenue"
+},
+axisX: {
+valueFormatString: "DD MMM YYYY",
+},
+axisY: {
+title: "FCFA",
+titleFontSize: 16
+},
+data: [{
+type: "spline",
+yValueFormatString: "$#,###.##",
+dataPoints: dataPoints
+}]
+};
+function addData(data) {
+for (var i = 0; i < data.length; i++) {
+dataPoints.push({
+x: new Date(data[i].date),
+y: data[i].units
+});
+}
+$("#chartContainer").CanvasJSChart(options);
+}
+$.getJSON("https://canvasjs.com/data/gallery/jquery/daily-sales-data.json", addData);
+}
+</script>
+
+</body>
+</html>
